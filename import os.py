@@ -8,6 +8,8 @@ class MyApp:
         self.master = master
         master.title("organizador de archivos")
 
+        master.iconbitmap('archivo.ico')
+        
         self.textbox = tk.Entry(master, width=50)
         self.textbox.pack()
 

@@ -3,7 +3,7 @@ from pathlib import Path
 class formato:
     #diccionario de formato
     file_type={
-        'IMAGENES':['.jpeg','.jpg','.tiff','.gif','.tmp','.png','.svg','.heif','.psd'],
+        'IMAGENES':['.jpeg','.jpg','.tiff','.gif','.tmp','.png','.svg','.heif','.psd','.PNG'],
         'AUDIO':['.aac','.aa','.dvf','.m4a','.m4b','.m4p','.mp3','.msv','.raw','.wav','.wma'],
         'VIDEOS': ['.avi', 'flv', '.wmv', '.mov', '.mp4', '.webm', '.vob', '.mng', '.qt', '.mpg', '.mpeg', '.3gp'],
         'DOCOUMENTS': ['.oxps', '.epub', '.pages', '.docx', '.doc', '.fdf', '.ods', '.odt', '.pwi', '.xsn', '.xps',
@@ -17,7 +17,7 @@ class formato:
         for file_format in file_formats:
             dct[file_format] = directory
 
-
+    #organiza los archivos
     def file_organizer():
         for entry in os.scandir():
             if entry.is_dir():
