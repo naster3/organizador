@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling>=1.24.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "organizador"
+version = "1.1.0"
+description = "Organiza carpetas (Descargas/Escritorio) por tipo o fecha, con simulación y deshacer."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "naster3" }]
+keywords = ["cli", "file-organizer", "productivity", "downloads", "python"]
+dependencies = [
+  "typer>=0.12.0",
+  "rich>=13.7.0",
+  "watchdog>=4.0.0",
+]
+
+[project.urls]
+Repository = "https://github.com/naster3/organizador"
+
+[project.scripts]
+organizador = "organizador.cli:app"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
+src = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
